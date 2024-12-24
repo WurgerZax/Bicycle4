@@ -37,7 +37,7 @@ class Program
         
         Task2 task2 = new Task2();
 
-        int task2Result = task2.FindMostCommonByte([3, 3,3, 2,2,2]);
+        int task2Result = task2.FindMostCommonByte([0,0,3, 3,3, 2,2,2]);
 
         Console.WriteLine(task2Result);
     }

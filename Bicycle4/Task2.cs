@@ -11,7 +11,7 @@ public class Task2
         
         for (int i = 0; i < bytesInputArray.Length; i++)
         {
-            if(previousByte == bytesInputArray[i]) continue;
+            if(previousByte == bytesInputArray[i] && i != 0) continue;
             byte currentByte = bytesInputArray[i];
             
             int currentCount = CountValueInArray(bytesInputArray, currentByte);
