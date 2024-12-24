@@ -37,9 +37,9 @@ public class Task2
     {
         int count = 0;
         
-        for (int i = 0; i < bytesInputArray.Length; i++)
+        foreach (var t in bytesInputArray)
         {
-            if (bytesInputArray[i] == value)
+            if (t == value)
             {
                 count++;
             }
