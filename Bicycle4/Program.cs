@@ -47,8 +47,14 @@ class Program
         //
         // Console.WriteLine(string.Join(',', task3Result));
         
-        Task4 task4 = new Task4();
+        // Task4 task4 = new Task4();
+        //
+        // Console.WriteLine(task4.IsArrayMonotonic([1,2,3,4,5]));
+        
+        Task5 task5 = new Task5();
 
-        Console.WriteLine(task4.IsArrayMonotonic([1,2,3,4,5]));
+        byte[] task5Result = task5.SortWithHighestFrequence([1, 1, 2, 4, 2, 2, 3]);
+        
+        Console.WriteLine(string.Join(',', task5Result));
     }
 }
