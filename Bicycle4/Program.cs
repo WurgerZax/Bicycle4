@@ -41,10 +41,14 @@ class Program
         //
         // Console.WriteLine(task2Result);
 
-        Task3 task3 = new Task3();
+        // Task3 task3 = new Task3();
+        //
+        // int[] task3Result = task3.MergeAndSort([1,1, 2, 4, 8], [3,3,3,5,6,7]);
+        //
+        // Console.WriteLine(string.Join(',', task3Result));
+        
+        Task4 task4 = new Task4();
 
-        int[] task3Result = task3.MergeAndSort([1,1, 2, 4, 8], [3,3,3,5,6,7]);
-     
-        Console.WriteLine(string.Join(',', task3Result));
+        Console.WriteLine(task4.IsArrayMonotonic([1,2,3,4,5]));
     }
 }
