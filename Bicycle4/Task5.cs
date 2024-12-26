@@ -2,7 +2,7 @@
 
 public class Task5
 {
-    // maybe it looks weird, зато без мам, пап и интернетов
+    // not done yet
     public byte[] SortWithHighestFrequence(byte[] array)
     {
         byte[] bytes = new byte[256];
