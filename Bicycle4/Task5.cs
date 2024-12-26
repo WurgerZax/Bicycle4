@@ -16,8 +16,6 @@ public class Task5
         }
         for (int i = 0; i < bytes.Length; i++)
         {
-            if(bytes[i] == 0) continue;
-
             for (int j = 0; j < bytes[i]; j++)
             {
                 arrayToReturn[arrayToReturnLastIndex++] = (byte)i;
