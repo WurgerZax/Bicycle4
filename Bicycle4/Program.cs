@@ -35,10 +35,16 @@ class Program
         //
         // Console.WriteLine(task1Result);
         
-        Task2 task2 = new Task2();
+        // Task2 task2 = new Task2();
+        //
+        // int task2Result = task2.FindMostCommonByte([0,0,3, 3,3, 2,2,2]);
+        //
+        // Console.WriteLine(task2Result);
 
-        int task2Result = task2.FindMostCommonByte([0,0,3, 3,3, 2,2,2]);
+        Task3 task3 = new Task3();
 
-        Console.WriteLine(task2Result);
+        int[] task3Result = task3.MergeAndSort([1,1, 2, 4, 8], [3,3,3,5,6,7]);
+     
+        Console.WriteLine(string.Join(',', task3Result));
     }
 }
