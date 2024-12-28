@@ -2,26 +2,49 @@
 
 public class Task5
 {
-    // not done yet
-    public byte[] SortWithHighestFrequence(byte[] array)
+    // now its done
+    public byte[] FrequencySort(byte[] source)
     {
-        byte[] bytes = new byte[256];
+        int[] frequency = new int[256];
 
-        byte[] arrayToReturn = new byte[array.Length];
-        int arrayToReturnLastIndex = 0;
+        byte[] arrayToReturn = new byte[source.Length];
 
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < source.Length; i++)
         {
-            bytes[array[i]]++;
-        }
-        for (int i = 0; i < bytes.Length; i++)
-        {
-            for (int j = 0; j < bytes[i]; j++)
-            {
-                arrayToReturn[arrayToReturnLastIndex++] = (byte)i;
-            }
+            frequency[source[i]]++;
         }
 
+        int currentMaxByte = -1;
+        int startIndex = 0;
+        
+        for (int i = 0; i < frequency.Length; i++)
+        {
+            currentMaxByte = SearchMaxIndex(frequency);
+
+            int count = frequency[currentMaxByte];
+            
+            Array.Fill(arrayToReturn, (byte)currentMaxByte, startIndex, count);
+            startIndex += count;
+            frequency[currentMaxByte] = -1;
+        }
+        
         return arrayToReturn;
+    }
+
+    private int SearchMaxIndex(int[] freq)
+    {
+        int currentMax = -1;
+        int currIndex = -1;
+        
+        for (int i = 0; i < freq.Length; i++)
+        {
+            if (freq[i] > currentMax)
+            {
+                currentMax = freq[i];
+                currIndex = i;
+            }       
+        }
+
+        return currIndex;
     }
 }

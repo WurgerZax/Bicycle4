@@ -53,7 +53,7 @@ class Program
         
         Task5 task5 = new Task5();
 
-        byte[] task5Result = task5.SortWithHighestFrequence([1, 1, 2, 4, 2, 2, 3]);
+        byte[] task5Result = task5.FrequencySort([1, 1, 2, 4, 2, 2, 3]);
         
         Console.WriteLine(string.Join(',', task5Result));
     }
